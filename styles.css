@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 *{
     font-size: 15px;
     box-sizing: border-box;
@@ -8,8 +10,137 @@ body{
 }
 .card-bg{
     background:#0a0c1b;
-    width:80vw;
+    width:68vw;
     height:60vh;
     margin:auto;
-    margin-top: 50px;
+    margin-top: 100px;
+    display:flex;
+    border-radius: 10px;
+    animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@-webkit-keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}
+.card1{
+    background-color: #1c1938;
+    height:100%;
+    width:50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display:flex;
+    flex-direction: column;
+}
+#p1{
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    padding:5vh 4vw 0 4vw;
+    color:white;
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+#sp{
+    color:#ab5bd8;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+#p2{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    padding:0 4vw;
+    margin:0;
+    color:rgb(170, 169, 169);
+    animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.sub-card{
+    display:flex;
+    width:90%;
+    margin-top:50px;
+    padding:0 4vw;
+    justify-content: space-between;
+}
+.companies{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.templates{
+    display:flex;
+    flex-direction: column;
+}
+.queries{
+    display:flex;
+    flex-direction: column;
+}
+.p3{
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    color:white;
+    animation: fade-in-left 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.p4{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 13px;
+    padding: 1vh 0;
+    text-align: left;
+    animation: fade-in-left 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    color:rgb(170, 169, 169);
+}
+
+/* Your existing CSS */
+
+.card2 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden; /* Ensures the overlay stays within card2 */
+}
+
+.card2 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+.card2:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.card2 .overlay-text {
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    filter: blur(0); /* Initial blur */
+    transition: filter 0.6s ease; /* Smooth transition */
+}
+
+.card2:hover img {
+    filter: blur(5px); /* Blur image on hover */
+}
+
+@-webkit-keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}};
+
