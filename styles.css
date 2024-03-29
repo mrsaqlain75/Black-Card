@@ -1,0 +1,15 @@
+*{
+    font-size: 15px;
+    box-sizing: border-box;
+}
+body{
+    padding:0;
+    margin:0;
+}
+.card-bg{
+    background:#0a0c1b;
+    width:80vw;
+    height:60vh;
+    margin:auto;
+    margin-top: 50px;
+}
